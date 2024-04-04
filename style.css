@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  border: 2px solid grey;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+}
+.to-do {
+  width: 100%;
+  max-width: 540px;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  /* background-color: #222222; */
+   background: linear-gradient(45deg, red, blue);
+  color: #fff;
+  border: 4px solid lightcoral;
+  border-radius: 20px;
+}
+.to-do h2 {
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #6b89c6;
+}
+.to-do h2 img {
+  width: 30px;
+  margin-left: 16px;
+}
+.addTasks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  margin-bottom: 25px;
+  background: #edeef0;
+  border-radius: 30px;
+}
+.addTasks input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 12px 15px;
+  font-weight: 18px;
+  border-radius: 30px;
+  background: #f2f2ed;
+}
+.addTasks button {
+  border: none;
+  outline: none;
+  padding: 12px 30px;
+  background: #ff5945;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  margin-left: 4px;
+}
+.tasks ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  background: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  left: 8px;
+}
+.checked {
+  text-decoration: line-through;
+  color: #b1aeae;
+}
+.checked::before {
+  background: url(images/checked.png);
+  background-size: cover;
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+}
+ul li span:hover {
+  background: #413e3e;
+}
